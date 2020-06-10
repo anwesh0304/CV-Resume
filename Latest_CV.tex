@@ -1,0 +1,229 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \usepackage[margin=1in]{geometry}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+
+    %\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+
+\newcommand{\combinesum}[3]{ \displaystyle{\sum_{r=0}^{#1} {r^{#3}} {#1 \choose #2}}} 
+
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{document}
+\vspace*{-40pt}
+
+    
+
+%==== Profile ====%
+\vspace*{-10pt}
+\begin{center}
+	{\Huge \scshape {Anwesh Bhattacharya}}\\
+	Gandhi Bhawan - 3131, BITS-Pilani, Pilani, Rajasthan - 333031, India $\cdot$ f2016590@pilani.bits-pilani.ac.in $\cdot$ +919116702059\\
+	GitHub : anwesh0304
+	
+\end{center}
+
+%==== Education ====%
+\header{Education}
+\textbf{Birla Institute of Technology and Science}\hfill Pilani, Rajasthan\\
+M.Sc (Hons) Phyiscs + B.E. (Hons) Computer Science \\
+\textbf{CGPA} : 9.14 \hfill August 2016 - Present\\
+\vspace{2mm}
+\textbf{National Public School, Koramangala}\hfill Bangalore, Karnataka\\
+Elective : Computer Science. \hfill June 2014 - April 2016\\
+\textbf{Percentage} : 97.2\% \\
+\vspace{2mm}
+\textbf{Baldwin Boys High School}\hfill Bangalore, Karnataka\\
+Elective : Computer Applications. \hfill June 2005 - April 2014\\
+\textbf{Percentage} : 95.6\% \\
+\vspace{2mm}
+
+%==== Experience ====%
+\header{Research Experience}
+\vspace{1mm}
+
+\textbf{National Institute of Advanced Studies (NIAS)} \hfill Bangalore\\
+\textit{Research Intern} \hfill May 2020 - Present\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Improving \textbf{PSO} algorithm with the application of \textbf{chaotic flows/maps}
+	\item Scientifically reasoning the improvement of performance
+	\item Approximation of gradients in \textbf{non-differentiable} objective functions
+	\item Transferring the technique to chaotic firing of \textbf{neural network} for \textbf{classification problems}
+\end{itemize}
+
+\textbf{Indian Institute of Astrophysics (IIA)} \hfill Bangalore\\
+\textit{Research Intern} \hfill May 2019 - July 2019\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Worked towards catalouging Double Nuclei Galaxies from SDSS with \textbf{Image Processing} under \textit{Dr. Mousumi Das}. Developing such a catalog is crucial to studying galaxy mergers
+	\item Used Python and utilized libraries such as \textbf{Numpy/OpenCV/Astropy/Web Scraping} libraries to process the FITS images of galaxies in the R-band.
+	\item Implemented \textbf{Optimization Techniques} (Gradient Ascent) and \textbf{Graph Algorithms} to classify galaxies having single or double nuclei
+	\item Obtained an accuracy of \textbf{94\%} on the catalog by \textit{Gimeno} et. al. (2004)
+	\item Tested the pipeline for stability and released it on GitHub. Code available at - \texttt{https://github.com/anwesh0304/anwesh-DAGN}. Preprint at \texttt{https://bit.ly/31ifeUP}
+\end{itemize}
+
+\textbf{Inter-University Centre for Astronomy and Astrophysics (IUCAA)} \hfill Pune\\
+\textit{Research Intern} \hfill May 2018 - July 2018\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Supervised by the Director of IUCAA, \textit{Dr. Somak Raychaudhury}
+	\item Worked towards The Detection of Patterns in the Cosmic Web in the COMA Supercluster using \textbf{Mathematical Morphology}
+	\item Revamped the DisPerSE source code, which was released in 2011, to run on Ubuntu 16.04 LTS
+	\item Fully installed all code dependencies and obtained experience in using the UNIX shell
+	\item Identified a set of five clusters, including the \textbf{Abell cluster}, and the connecting filaments in COMA.
+\end{itemize}
+
+\header{Publications}
+{\textbf{Stirling Numbers Via Combinatorial Sums}}\hfill June 2019\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+    \item Analysed summations of the type $\combinesum{n}{r}{k}$ for general $k$. 
+    \item Obtained the recurrence for the Stirling Numbers of the First and Second Kind in a \textbf{novel Manner}
+    \item Verified the results with Online Encylcopedia of Integer Sequences (OEIS)
+    \item Presented at the \textbf{International Conference on Modelling, Machine Learning and Astronomy} 2019, at PES University, Bangalore.
+    \item Preprint available at \texttt{http://bit.ly/2k951dF}
+\end{itemize}
+\vspace*{2mm}
+
+\header{Academic Projects}
+{\textbf{ERPLAG Compiler (BITS-Pilani)}} \hfill January 2020 - May 2020\\
+\begin{itemize} \itemsep 1pt
+    \item Created a 64-bit compiler for the toy language \textbf{ERPLAG} in \textbf{C} without the help of any additional libraries
+    \item Implemented features such as \textbf{expressions}, \textbf{dynamic array abstraction} and \textbf{multi-return function calls}
+    \item Tested rigorously for \textbf{portability} on various Linux distributions and Windows.
+\end{itemize}
+\vspace*{2mm}
+
+{\textbf{Machine Learning on FPGA (CEERI)}}\hfill January 2020 - May 2020\\
+\begin{itemize} \itemsep 1pt
+    \item Learning to use High Level Synthesis (\textbf{HLS}) in \textbf{C++} for synthesis of accelerators
+    \item Designing a simple classifier on hardware to perform handwritten digit recognition from \textbf{MNIST}.
+\end{itemize}
+\vspace*{2mm}
+
+{\textbf{Special Topics in Quantum Mechanics (BITS-Pilani)}}\hfill August 2019 - December 2019\\
+\begin{itemize} \itemsep 1pt
+    \item Studying the historical aspects and subtle topics of Quantum Mechanics which are not taught in detail in an undergraduate course
+    \item Read the work by \textit{Tomonaga} on the foundations of \textbf{blackbody radiation, Planck's hypothesis} and \textbf{Einstein's corpuscular theory}
+    \item Studied topics such as \textbf{EPR Paradox, Bell's Inequality}.
+    \item Exposed to advanced topics such as \textbf{Feynman's Path Integral Formulation, Hamilton-Jacobi theory.}
+\end{itemize}
+\vspace*{2mm}
+
+
+{\textbf{Dark Energy Modelling and Gravitational Lensing (BITS-Pilani)}}\hfill August 2019 - December 2019\\
+\begin{itemize} \itemsep 1pt
+    \item Studying the \textbf{FLRW} metric and background cosmology to model the equation of state for dark energy.
+    \item  Used the \textbf{7-CPL model} to obtain Hubble parameter, luminosity and angular-diameter distances as a function of redshift.
+    \item Used the available code of Eisenstein et. al. to obtain growing mode and power spectrum
+\end{itemize}
+\vspace*{2mm}
+
+\header{Courses}
+\begin{itemize} \itemsep 1pt
+	\item Math: Linear Algebra, Differential Equations, Numerical Techniques    
+	\item Physics: Classical Mechanics, Electromagnetic Theory, Quantum Computing, Statistical Physics, General Relativity, Solid-State Physics, Nuclear Physics
+	\item Computer Science: Data Structures \& Algorithms, OOP, Database Systems, Operating Systems, Computer Architecture, Theory of Computation, Compiler Construction, Computer Networks, Parallel Computing
+	\item Coursera (Completed): 
+	\begin{itemize}
+	    \item Machine Learning (Certificate : 6WSURAQVC6PF)
+	    \item Tensorflow Specialisation - I (Certificate : LUFURSD8ABEK)
+	    \item Deep Learning Specialisation - I (Certificate : WLJ3EQ3Z5BPD)
+	\end{itemize}
+\end{itemize}
+\vspace{2mm}
+
+\newpage
+
+\header{Skills}
+\begin{itemize}
+	\item Programming Langauges
+	\begin{itemize}
+	    \item Proficient: C, Python, MATLAB, \LaTeX
+	    \item Intermediate : C++, Java, Verilog, bash
+	    \item Beginner : Haskell, Scheme, batch
+	\end{itemize}
+	\item Python Modules: Numpy, Tensorflow, Pandas, Keras, Astropy, OpenCV, BeautifulSoup
+	\item Version Control : git
+\end{itemize}
+\vspace{2mm}
+
+\header{Scholarships}
+\textbf{Innovation in Science Pursuit for Inspired Research (INSPIRE) Scholarship} \\ \textbf{Department of Science and Technology (DST)}\\ \vspace{2mm}
+Awarded the scholarship for excellent performance in AISSCE (CBSE 12th) board examinations and for securing a rank of 1100 in JEE Mains 2016\\
+\vspace*{2mm}
+
+\header{Extra-curricular Activities}
+\begin{itemize}
+    \item Music : I play guitar, keyboard, drums and I'm interested in music production
+    \item Animal Welfare : I raised Rs 11,000 for an injured dog in my college dorm
+    \item Gymming : I take a keen interest in body-building
+\end{itemize}
+\vspace*{2mm}
+
+\header{Languages}
+English, Hindi and Bengali
+\vspace*{2mm}
+
+\ 
+\end{document}
